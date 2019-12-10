@@ -1,0 +1,43 @@
+openapi: 3.0.0
+info:
+  version: ${project.version}
+  title: Pipe endpoint
+  x-logo:
+    url: "images/${branding.logo}"
+paths:
+  /pipe:
+    post:
+      description: Sink for pipe object
+      summary: receiving a pipe object
+      operationId: incomingPipe
+      requestBody:
+        description: The pipe object
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Pipe"
+      responses:
+        '202':
+          description: Order accepted. Returns the runId. If not already set, one is generated
+          content:
+            text/plain:
+              schema:
+                type: string
+  /config/schema:
+    get:
+      description: Returns the json schema for the segment configuration object
+      summary: get the config schema
+      operationId: configSchema
+      responses:
+        '200':
+          description: JSON schema for the segment configuraion object
+          content:
+            application/schema+json:
+              schema:
+                type: object
+components:
+  schemas:
+    Pipe:
+      description: The pipe descriptor.
+      type: object

@@ -1,0 +1,150 @@
+{
+  "header": {
+    "id": "3ff7a0a7-2fc3-4e84-a6ef-a83ab55b698c",
+    "runId": "testRun",
+    "title": "Workshop Pipe",
+    "context": "Workshop",
+    "transport": "payload",
+    "version": "1.0"
+  },
+  "body": {
+    "segments": [
+      {
+        "header": {
+          "name": "segment-aba",
+          "segmentNumber": 1,
+          "title": "aba Segment",
+          "processed": false
+        },
+        "body": {
+          "config": {},
+          "payload": {
+            "header": {
+              "seqNumber": 1,
+              "dataType": "text"
+            },
+            "body": {
+              "data": "Wird Zeit fuer Bier!"
+            }
+          },
+          "endpoint": {
+            "address": "https://pipe-service-vertx-template-aba.okd.fokus.fraunhofer.de/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324128cd",
+          "segmentNumber": 2,
+          "title": "ultimate Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://ultimate-string-reversal-jen:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324138cd",
+          "segmentNumber": 3,
+          "title": "sur Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-sur:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324148cd",
+          "segmentNumber": 4,
+          "title": "aan Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-aan:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324158cd",
+          "segmentNumber": 5,
+          "title": "ben Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-ben:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324168cd",
+          "segmentNumber": 6,
+          "title": "stb Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-stb:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324178cd",
+          "segmentNumber": 7,
+          "title": "sma Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-sma:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324188cd",
+          "segmentNumber": 8,
+          "title": "vbo Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-vbo:8080/pipe",
+            "method": "POST"
+          }
+        }
+      },
+      {
+        "header": {
+          "id": "40330e5d-890a-497c-a34c-e7a6324188cd",
+          "segmentNumber": 9,
+          "title": "fki Segment",
+          "processed": false
+        },
+        "body": {
+          "endpoint": {
+            "address": "http://pipe-service-vertx-template-fki:8080/pipe",
+            "method": "POST"
+          }
+        }
+      }
+    ]
+  }
+}

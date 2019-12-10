@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title th:remove="all">Template for HTML email with inline image</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  </head>
+  <body>
+  	<img src="piveau_logo.png" th:src="'cid:' + ${logo}" />
+    <h2><span th:text="${header}">Harvesting run failed!</span></h2>
+  	<h3><span th:text="${harvester}">GovData to EDP</span></h3>
+    <p>
+    	<pre th:text="${message}">This is the default message.</pre>
+    </p>
+    <p/>
+    <p>
+    Config:
+        <pre th:text="${details}">No more details.</pre>
+    </p>
+  	<p>Run started <span th:text="${run}">recently</span></p>
+    <p>
+      Regards, <br />
+	  <em>The EDP Team</em>
+    </p>
+  </body>
+</html>
